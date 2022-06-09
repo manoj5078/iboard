@@ -1,0 +1,32 @@
+{% extends "usermaster_base/base.html" %}
+
+{% block content %}
+<html>
+<head>
+<title>Control File Upload</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+<p><h1>Control File Upload</h1></p>
+{% if messages %}
+    {% for message in messages %}
+        <div style="width: 400px;" class="alert alert-success{{ message.tag }}">
+            <h5 style="color: green;">{{message}} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button></h5>
+        </div>
+    {% endfor %}
+{% endif %}
+<form method="post" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button> <br><br>
+</form>
+</body>
+
+</html>
+{% endblock content %} 

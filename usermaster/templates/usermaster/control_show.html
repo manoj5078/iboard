@@ -1,0 +1,60 @@
+{% extends 'usermaster_base/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+   
+   
+</head>
+{% block content%}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+            <table id="bootstrapdatatable" class="table table-striped table-bordered" width="90%">
+                    <thead>
+                        <th><input type="checkbox" id="checkall" /></th>
+                        <th>ID</th>
+                        <th>Machine Name</th>
+                        <th>Operation Number</th>
+                        <th>File</th>
+                        <th>Delete</th>
+                     </thead>
+            <tbody>
+            {% for control in controlmachines %}  
+            <tr>  
+             <td><input type="checkbox" class="checkthis" /></td>
+             <td>{{ control.id }}</td>  
+             <td>{{ control.machine_name }}</td>  
+             <td>{{ control.operation_no }}</td>  
+             <td>{{ control.control_uploadfile }}</td>
+             <td><a href="/usermaster/cdelete/{{ control.id }}"><span placement="top" style="color:brown;" class="glyphicon glyphicon-trash"></span></a></td>  
+            </tr>
+            {% endfor %}  
+            </tbody>
+                 
+            </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       $(document).ready(function() {
+           $('#bootstrapdatatable').DataTable({     
+             "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+               "iDisplayLength": 3
+              } 
+           );
+       } );
+    </script>
+
+</body>
+{% endblock content %}
+</html>

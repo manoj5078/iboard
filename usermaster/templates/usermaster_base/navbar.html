@@ -1,0 +1,20 @@
+{% load static %}
+
+<header id="header" class="header" style="background: black">
+    <div class="top-left">
+        <div class="navbar-header" style="background: black">
+            <a class="navbar-brand" style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASHOK IRON WORKS</a>
+
+            <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+    <div style="position: fixed; margin-top: 15px;">
+        <img src="https://raw.githubusercontent.com/manoj5078/images2/main/logo.jpg" alt="logo">
+    </div>
+    <div>
+        <h3 style="position: absolute; margin-left: 400px; margin-bottom: 5px; color: white;">MASTER</h3>
+    </div>
+    <div>
+        <p style="margin-top: 10px; margin-left: 900px; position: relative;">{% now 'D' %} {% now 'H:m:s' %} {% now "d-M-Y" %}</p>
+    </div>
+</header>

@@ -1,0 +1,90 @@
+<aside id="left-panel" class="left-panel" style="background: black">
+    <nav class="navbar navbar-expand-sm navbar-default" style="background: black">
+        <div id="main-menu" class="main-menu collapse navbar-collapse" style="background: black">
+            <ul class="nav navbar-nav">
+                <li class="active" style="background: black" >
+                    <a href="{% url 'usermaster:home' %}"><i class="menu-icon fa fa-laptop"></i>HOME</a>
+                </li>
+                <li class="menu-title" style="color: white">i - BOARD S3 LINE</li><!-- /.menu-title -->
+                <li class="menu-item-has-children dropdown" >
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Control Process</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:control_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:control_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Process Sheet</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:process_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:process_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Skill Matrix</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:skill_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:skill_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Maintenance</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:maintain_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:maintain_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Sws</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:sws_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:sws_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Safety</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:safety_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:safety_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>PFD</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:pfd_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:pfd_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-file"></i>Gauges</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-plus-circle" style="color: darkblue"></i><a href="{% url 'usermaster:gauges_upload' %}">Add File</a></li>
+                        <li><i class="fa fa-eye" style="color: darkblue"></i><a href="{% url 'usermaster:gauges_index' %}">View Files</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="{% url 'usermaster:index' %}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Machine Master</a>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="{% url 'Users:user_index' %}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Users</a>
+                </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="{% url 'usermaster:showvideo' %}" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-camera"></i>Videos</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="{% url 'logout' %}" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-logout"></i>Logout</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-logout"></i>Logout</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</aside>
